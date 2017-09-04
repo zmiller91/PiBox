@@ -1,0 +1,11 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://model.rpibox.zm.com/"
+           elementFormDefault="qualified">
+    
+    <xs:complexType name="ComponentMessage">
+        <xs:sequence>
+            <xs:element name="operation" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
