@@ -1,0 +1,156 @@
+{
+    "name": "PiBox",
+    "packageName": "com.zm.pibox",
+
+    "configuration": {
+        "channels": {
+            "test": "test",
+            "prod": "prod"
+        },
+        "hosts": {
+            "test": "localhost",
+            "prod": "localhost"
+        }
+    },
+
+    "api": {
+        "methods": [
+            {
+                "name": "putLightConfiguration",
+                "result": "LightConfiguration",
+                "params": [
+                    {
+                        "name": "config",
+                        "ref": "LightConfiguration"
+                    }
+                ]
+            },
+            {
+                "name": "putHVACConfiguration",
+                "result": "HVACConfiguration",
+                "params": [
+                    {
+                        "name": "config",
+                        "ref": "HVACConfiguration"
+                    }
+                ]
+            },
+            {
+                "name": "putTemperatureConfiguration",
+                "result": "TemperatureConfiguration",
+                "params": [
+                    {
+                        "name": "config",
+                        "ref": "TemperatureConfiguration"
+                    }
+                ]
+            },
+            {
+                "name": "startActivity",
+                "params": [
+                    {
+                        "name": "name",
+                        "ref": "string"
+                    }
+                ]
+            },
+            {
+                "name": "pauseActivity",
+                "params": [
+                    {
+                        "name": "name",
+                        "ref": "string"
+                    }
+                ]
+            },
+            {
+                "name": "stopActivity",
+                "params": [
+                    {
+                        "name": "name",
+                        "ref": "string"
+                    }
+                ]
+            },
+            {
+                "name": "overrideComponentOn",
+                "params": [
+                    {
+                        "name": "name",
+                        "ref": "string"
+                    }
+                ]
+            },
+            {
+                "name": "overrideComponentOff",
+                "params": [
+                    {
+                        "name": "name",
+                        "ref": "string"
+                    }
+                ]
+            },
+            {
+                "name": "removeComponentOverride",
+                "params": [
+                    {
+                        "name": "name",
+                        "ref": "string"
+                    }
+                ]
+            }
+        ]
+    },
+
+    "models": [
+        {
+            "name": "LightConfiguration",
+            "properties": [
+                {
+                    "name": "on",
+                    "ref": "time"
+                },
+                {
+                    "name": "off",
+                    "ref": "time"
+                }
+            ]
+        },
+        {
+            "name": "HVACConfiguration",
+            "properties": [
+                {
+                    "name": "minimum",
+                    "ref": "int"
+                },
+                {
+                    "name": "maximum",
+                    "ref": "int"
+                }
+            ]
+        },
+        {
+            "name": "IrrigationConfiguration",
+            "properties": [
+                {
+                    "name": "minimum",
+                    "ref": "int"
+                }
+            ]
+        },
+        {
+            "name": "time",
+            "javaType": "java.sql.Time"
+        },
+        {
+            "name": "string",
+            "javaType": "String"
+        },
+        {
+            "name": "int",
+            "javaType": "int"
+        }],
+
+    "exceptions": []
+
+}
