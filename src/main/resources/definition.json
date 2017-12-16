@@ -36,12 +36,12 @@
                 ]
             },
             {
-                "name": "putTemperatureConfiguration",
-                "result": "TemperatureConfiguration",
+                "name": "putIrrigationConfiguration",
+                "result": "IrrigationConfiguration",
                 "params": [
                     {
                         "name": "config",
-                        "ref": "TemperatureConfiguration"
+                        "ref": "IrrigationConfiguration"
                     }
                 ]
             },
